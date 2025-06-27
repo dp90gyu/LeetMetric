@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LeetMetric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LeetMetric</h1>
+        <label>Enter your username below:</label><br>
+        <input type="text" id="user-input" />
+        <button id="search-btn">Search</button>
+        <button id="theme-toggle">🌙 Toggle Theme</button>
+
+        <div id="loading-spinner" class="spinner hidden"></div>
+
+        <div class="stats-container">
+            <div class="progress-ring easy-progress"><span id="easy-label">0/0</span>Easy</div>
+            <div class="progress-ring medium-progress"><span id="medium-label">0/0</span>Medium</div>
+            <div class="progress-ring hard-progress"><span id="hard-label">0/0</span>Hard</div>
+        </div>
+
+        <div class="stats-cards"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "leetmetric-main",
+  "version": "1.0.0",
+  "description": "Engineered a web-based dashboard using HTML, CSS, and JavaScript, implementing asynchronous data fetching and dynamic DOM manipulation to present real-time coding performance insights. Parsed and visualized user data from LeetMetric and LeetCode, including question-level activity, submission timelines, problem difficulty distribution, and topic-specific strengths and weaknesses. Designed and developed interactive UI components to filter, categorize, and interpret coding trends, enabling deeper analysis of problem-solving behavior and continuous skill development.",
+  "main": "proxy-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #2f2f45;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    background: #3b3636;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    max-width: 600px;
+    transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f8f8f8;
+}
+
+label {
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 8px;
+    width: 70%;
+    max-width: 300px;
+    background: #e0e6f7;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffa534;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e08e2f;
+}
+
+.stats-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.progress-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#00c46f var(--progress, 0%), #292b36 0%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.progress-ring span {
+    position: absolute;
+    z-index: 2;
+    font-size: 16px;
+}
+
+.progress-ring::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #3b3636;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.stats-cards {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: #ff942e;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #00c46f;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 🌗 Dark/Light mode toggle */
+.light-mode {
+    background: #f9f9f9;
+    color: #111;
+}
+
+.light-mode .container {
+    background: #fff;
+    color: #111;
+}
+
+.light-mode .progress-ring::before {
+    background: #f0f0f0;
+}
+
+.light-mode .card {
+    background-color: #ffc15f;
+    color: #111;
+}
